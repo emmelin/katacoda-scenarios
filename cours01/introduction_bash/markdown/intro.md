@@ -11,4 +11,4 @@ Tu verras ce qu'est le terminal et comment apprivoiser le pingouin Tux !
 J'espère que ça va te plaire !
 
 ## pré-requis
-* aucun
+* aucun, tu débutes probabement sur ce sujet mais tu vas utiliser bash pendant 3 ans!
