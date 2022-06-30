@@ -4,6 +4,17 @@ On peut considérer une commande comme une  *boite noire* qui possède plusieure
 
 <img src="./assets/commande.png" alt="schéma d'une commande"/>
 
+
+
+
+![Python Logo](../assets/commande.png)
+
+```{image} ../assets/commande.png
+:align: center
+```
+
+
+
 ## les sorties
 
 Tu connais déjà la sortie standard et la sortie d'erreur. Par défaut, ces deux sorties se font dans le terminal.
