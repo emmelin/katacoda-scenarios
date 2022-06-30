@@ -1,6 +1,6 @@
 ElementsNotationJR.txt
 Decoupage
 build
-source
+source/**
 !/source/conf.py
 .vscode/settings.json
