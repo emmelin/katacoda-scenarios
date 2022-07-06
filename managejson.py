@@ -28,7 +28,7 @@ for step in details["steps"]:
     if not os.path.exists(filename):
            os.makedirs(filename)
 
-#print(new)
+print(new)
 
 with open('result.json', 'w', encoding='utf8') as fp:
     json.dump(new, fp, indent=4, ensure_ascii=False)
