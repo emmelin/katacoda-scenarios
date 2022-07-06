@@ -4,3 +4,4 @@ build
 source/**
 !/source/conf.py
 .vscode/settings.json
+.DS_Store
