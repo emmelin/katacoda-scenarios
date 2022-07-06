@@ -19,7 +19,7 @@ Les fichiers `exemple1.txt` et `exemple18.txt` ont le même numéro d'inode !
 11541285 -rw-rw-r-- 2 sasha sasha 51232 10237 31 Jul 17 10:21 exemple18.txt
 ```
 
-<img src="./assets/wtf.png" alt="quelle est cette sorcellerie ?" width="233" style="float:right"/>
+![quelle est cette sorcellerie ?](../assets/wtf.png)
 
 ## Quelle est cette sorcellerie ?
 

@@ -11,7 +11,7 @@ Si `leMur` n'est pas un dossier ou n'existe pas dans le dossier courant, tu obti
 # exercice
 
 Voici le prompt et une ligne de commande dans un terminal imaginaire
-![touche tabulation](./assets/mv.png)
+![touche tabulation](../assets/mv.png)
 
 Je te rappelle que la commande `mv` sert à déplacer un fichier.
 

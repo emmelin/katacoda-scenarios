@@ -4,7 +4,7 @@ Partons à la découverte de `nano`.
 Exécute la commande `nano machin.txt`{{execute}} pour éditer un nouveau fichier qui s'appellera machin.txt : 
 
 Tu vois alors s'afficher quelque chose comme ça :
- ![nano](./assets/nano_machin.txt.png)
+ ![nano](../assets/nano_machin.txt.png)
 
 * En haut à gauche, on voit la version de nano
 * En haut au milieu, on voit le nom du fichier ouvert
@@ -15,7 +15,7 @@ Tu vois alors s'afficher quelque chose comme ça :
 
 Ajoute du texte et sauvegarde en appuyant sur <kbd>Ctrl</kbd>+<kbd>O</kbd>.
 Tu va voir apparaître :
- ![nano](./assets/nano_machin_enregistrer.png)
+ ![nano](../assets/nano_machin_enregistrer.png)
 
 
 Il faut juste d'appuyer sur <kbd>entrée</kbd>.

@@ -6,7 +6,7 @@ C'est juste une très courte introduction.
 
 Tu verras ce qu'est le terminal et comment apprivoiser le pingouin !
 
-<img src="./assets/linux_pinguin_terminal.jpg" alt="linux pingouin terminal"/>
+![linux pingouin terminal](../assets/linux_pinguin_terminal.jpg)
 
 J'espère que ça va te plaire !
 

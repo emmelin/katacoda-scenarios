@@ -4,7 +4,7 @@ Un dossier est stocké comme un fichier, par un inode.
 
 * Les blocs de données contiennent les données des fichiers (ce qu'on va voir en regardant le contenu hexadécimal d'un fichier)
 * les inodes contiennent les méta-données : permissions, taille du fichier, date d'accès/de création, etc. ainsi que l'indication de l'endroit où se trouvent les données associées comme le montre le zoom sur l'image suivante :
-![Décomposition du disque](./assets/disque-inodes.png))
+![Décomposition du disque](../assets/disque-inodes.png))
 
 Comme pour les fichiers, les inodes des dossiers contiennent les méta-données : permissions, taille du dossier (4096 octets), date de dernière modification, etc. ainsi que l'indication de l'endroit où se trouvent les données associées.
 

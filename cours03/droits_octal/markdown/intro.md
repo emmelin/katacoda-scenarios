@@ -1,5 +1,5 @@
 
-<img src="./assets/chmod777.png" alt="chmod 777" width="233" style="float:right"/>
+![chmod 777](../assets/chmod777.png)
 
 Dans ce scénario, tu vas apprendre à modifier les droits de tes fichiers/dossiers.
 

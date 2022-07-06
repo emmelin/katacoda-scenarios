@@ -4,7 +4,7 @@ On peut voir une commande comme une sorte de *boîte noire* qui traite des infor
 
 La plupart du temps, elle délivre un message que tu vois s'afficher dans dans le terminal.
 
-<img src="./assets/commande_sortie_to_terminal.png" alt="Commande sortie vers le terminal"/>
+![Commande sortie vers le terminal](../assets/commande_sortie_to_terminal.png)
 
 Par exemple, si tu tapes `ls -l`{{execute}}, tu vois s'afficher dans le terminal quelque chose comme :
 ```
@@ -25,7 +25,7 @@ En réalité, il existe plusieurs types de sorties (notions complétées au cour
 
 Par défaut, ces deux sorties se dirigent vers le terminal
 
-<img src="./assets/img/commande_ss_se_to_terminal.png" alt="Commande sorties vers le terminal"/>
+![Commande sorties vers le terminal](../assets/commande_ss_se_to_terminal.png)
 
 Par exemple :
 

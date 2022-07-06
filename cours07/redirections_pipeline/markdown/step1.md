@@ -2,7 +2,7 @@
 
 On peut considérer une commande comme une  *boite noire* qui possède plusieures entrées et plusieures sorties.
 
-<img src="./assets/commande.png" alt="schéma d'une commande"/>
+![schéma d'une commande](../assets/commande.png)
 
 
 

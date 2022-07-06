@@ -12,7 +12,7 @@ Lance Libreoffice sur ton ordinateur (et pas dans Katacoda !)
 
 Ensuite ouvre un nouveau classeur et entre quelques données pour avoir quelque chose qui ressemble à ça :
 
-<img src="./assets/tableau.png" alt="tableau dans libreoffice"/>
+![tableau dans libreoffice](../assets/tableau.png)
 
 Enregistre ce fichier au format **ods** qui est le format standart de Libreoffice.
 

@@ -2,7 +2,7 @@
 
 Dans ce scénario, on va jouer au plombier : on va s'ammuser à brancher des commandes entre elles.
 
-<img src="./assets/penguin.png" alt="linux pingouin plombier"/>
+![linux pingouin plombier](../assets/penguin.png)
 
 ## Objectifs de ce scénario :
 * completer la notion d'entrées/sorties

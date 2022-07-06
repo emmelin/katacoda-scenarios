@@ -32,4 +32,4 @@ Ensuite,  regarde la correction pour vérifier tes réponses.
 
 Comme tu peux le voir, on peut enchainer les pipelines !
 
-<img src="./assets/pipe2.png" alt="schéma de deux pipelines"/>
+![schéma de deux pipelines](../assets/pipe2.png)

@@ -8,7 +8,7 @@ Parfois, il peut arriver qu'une commande génère des messages,
 mais que ces messages ne nous intéressent pas : on ne veut ni les voir s'afficher dans le terminal, ni les stocker dans un fichier.
 
 
-<img src="./assets/commande_ss_se_to_terminal_trash.png" alt="Commande sortie erreur vers un trou noir"/>
+![Commande sortie erreur vers un trou noir](../assets/commande_ss_se_to_terminal_trash.png)
 
 
 Par exemple, pour envoyer dans le trou noir la sortie d'erreur de la commande `cat README Exo1 Exo2`, on tape :

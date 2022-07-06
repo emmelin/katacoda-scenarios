@@ -4,7 +4,7 @@ Bravo !
 
 Je ne crois pas t'avoir parlé de la *complétion automatique*. C'est pourtant un outil formidable, et ça va te faire gagner beaucoup de temps !
 
-![touche tabulation](./assets/tab.png)
+![touche tabulation](../assets/tab.png)
 
 # La complétion automatique
 
@@ -30,7 +30,7 @@ Encore des super-pouvoirs à utiliser :)
 
 Avant de continuer, déplace toi dans le dossier  :
 
-![touche tabulation](./assets/cheminTache.png)
+![touche tabulation](../assets/cheminTache.png)
 
 Oops ! Je suis maladroit ... J'ai fait des tâches sur le chemin ...
 

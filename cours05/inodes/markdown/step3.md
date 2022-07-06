@@ -1,15 +1,15 @@
 # Inodes et données
 
 Sur le schéma suivant, on représente les octets de la partition, chaque rectangle représente un groupe de 256 octets :
-![Décomposition du disque](./assets/disque.png))
+![Décomposition du disque](../assets/disque.png))
 
 
 Cet espace est découpé en deux parties : une liste d'inodes (en bleu) et les blocs de données (en violet) :
-![Décomposition du disque](./assets/disque-separe.png))
+![Décomposition du disque](../assets/disque-separe.png))
 
 * Les blocs de données contiennent les données des fichiers (ce qu'on va voir en regardant le contenu hexadécimal d'un fichier)
 * les inodes contiennent les méta-données : permissions, taille du fichier, date de dernière modification, etc. ainsi que l'indication de l'endroit où se trouvent les données associées comme le montre le zoom sur l'image suivante :
-![Décomposition du disque](./assets/disque-inodes.png))
+![Décomposition du disque](../assets/disque-inodes.png))
 
 Chaque fichier est identifié par un inode. Les données du fichier sont pointées par les pointeurs de blocs. Le numéro d'inode est la position de l'inode dans la liste des inodes. Pour connaître le numéro d'inode des fichiers, tu peux faire `ls -i`.
 
