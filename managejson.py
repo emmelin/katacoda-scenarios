@@ -52,6 +52,8 @@ print("treate"+indexfile)
 with open(str(indexfile), "r") as f:
     df = json.load(f)
 
+f.close()
+
 new={}
 
 for n in ("title","description","difficulty","time","environment","backend"):
@@ -103,11 +105,16 @@ for file in ("intro.md","finish.md"):
         #print(src+" to "+des)
         shutil.move(src, des)
 
-if os.path.exists('/path/file.txt'):
-    os.remove('/path/file.txt')
+
 
 if os.path.exists(os.path.dirname(indexfile)+"/markdown"):
-    os.rmdir(os.path.dirname(indexfile)+"/markdown")
+    if len(os.listdir(os.path.dirname(indexfile)+"/markdown")) == 0:
+        # removing the file using the os.remove() method
+        os.rmdir(os.path.dirname(indexfile)+"/markdown")
+    else:
+        # messaging saying folder not empty
+        print("Folder is not empty")
+    
 
 
 with open(os.path.dirname(indexfile)+"/finish.md") as f:
@@ -144,7 +151,7 @@ if "finish" in new["details"]:
 
 
 
-with open('result.json', 'w', encoding='utf8') as fp:
+with open(indexfile, 'w', encoding='utf8') as fp:
     json.dump(new, fp, indent=4, ensure_ascii=False)
 
 
