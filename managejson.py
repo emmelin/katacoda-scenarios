@@ -140,7 +140,6 @@ changeKey(new,"courseData","background")
 
 changeKey(new,"code","foreground")
 
-print(new["details"])
 
 if "assets" in df["details"]: 
     new["details"]["assets"]={'host01': [{'file': 'aide', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'rep', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'tpunixauto.sh', 'target': '/etc/profile.d', 'chmod': '+r'}, {'file': 'alternatif.tar.bz2', 'target': '/tmp', 'chmod': '+r'}]}
