@@ -47,6 +47,8 @@ def changeKey(json_input, lookup_key,text):
 
 indexfile=sys.argv[1]
 
+print("treate"+indexfile)
+
 with open(str(indexfile), "r") as f:
     df = json.load(f)
 
@@ -70,7 +72,7 @@ for step in details["steps"]:
     filename=os.path.dirname(indexfile)+"/"+namestep
     if not os.path.exists(filename):
            os.makedirs(filename)
-           print("create ")
+           
            print(textinit[1:])
            os.rename(os.path.dirname(indexfile)+"/"+textinit[1:],filename+"/"+namestep+".md")
     with open(filename+"/"+namestep+".md") as f:
@@ -85,7 +87,7 @@ for step in details["steps"]:
 for file in ("aide","cleanrep.sh","rep"):
     src="./resourcesKillercoda/"+file
     des=os.path.dirname(indexfile)+"/assets/"+file
-    print(src+" to "+des)
+    #print(src+" to "+des)
     shutil.copy(src, des)
 
 
@@ -94,7 +96,7 @@ details["finish"]["background"]="assets/cleanrep.sh"
 for file in ("intro.md","finish.md"):
     src=os.path.dirname(indexfile)+"/markdown/"+file
     des=os.path.dirname(indexfile)+"/"+file
-    print(src+" to "+des)
+    #print(src+" to "+des)
     shutil.copy(src, des)
 
 
