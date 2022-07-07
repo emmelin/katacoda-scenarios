@@ -140,13 +140,15 @@ changeKey(new,"courseData","background")
 
 changeKey(new,"code","foreground")
 
-if "assets" in new["details"]: 
+print(new["details"])
+
+if "assets" in df["details"]: 
     new["details"]["assets"]={'host01': [{'file': 'aide', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'rep', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'tpunixauto.sh', 'target': '/etc/profile.d', 'chmod': '+r'}, {'file': 'alternatif.tar.bz2', 'target': '/tmp', 'chmod': '+r'}]}
 
-if "intro" in new["details"]: 
+if "intro" in df["details"]: 
     new["details"]["intro"]["text"]=new["details"]["intro"]["text"].replace("/markdown/","")
 
-if "finish" in new["details"]: 
+if "finish" in df["details"]: 
     new["details"]["finish"]["text"]=new["details"]["finish"]["text"].replace("/markdown/","")
 
 
@@ -154,6 +156,8 @@ if "finish" in new["details"]:
 with open(indexfile, 'w', encoding='utf8') as fp:
     json.dump(new, fp, indent=4, ensure_ascii=False)
 
+# with open("test.json", 'w', encoding='utf8') as fp:
+#     json.dump(new, fp, indent=4, ensure_ascii=False)
 
 
 
