@@ -3,6 +3,9 @@
 import  json
 import sys
 import  os
+import shutil
+
+
 
 
 def item_generator(json_input, lookup_key):
@@ -46,7 +49,7 @@ indexfile=sys.argv[1]
 
 with open(str(indexfile), "r") as f:
     df = json.load(f)
-print(df)
+
 new={}
 
 for n in ("title","description","difficulty","time","environment","backend"):
@@ -67,15 +70,40 @@ for step in details["steps"]:
     filename=os.path.dirname(indexfile)+"/"+namestep
     if not os.path.exists(filename):
            os.makedirs(filename)
+           print("create ")
            print(textinit[1:])
            os.rename(os.path.dirname(indexfile)+"/"+textinit[1:],filename+"/"+namestep+".md")
+    with open(filename+"/"+namestep+".md") as f:
+        file=f.read()
+        if "[ ]" in file  or "( )" in file :
+            step["verify"]=namestep+"/verify.sh"
+       
     step["text"]=namestep+"/"+namestep+".md"
     step["background"]="assets/cleanrep.sh"
 
 
+for file in ("aide","cleanrep.sh","rep"):
+    src="./resourcesKillercoda/"+file
+    des=os.path.dirname(indexfile)+"/assets/"+file
+    print(src+" to "+des)
+    shutil.copy(src, des)
 
 
 details["finish"]["background"]="assets/cleanrep.sh"
+
+for file in ("intro.md","finish.md"):
+    src=os.path.dirname(indexfile)+"/markdown/"+file
+    des=os.path.dirname(indexfile)+"/"+file
+    print(src+" to "+des)
+    shutil.copy(src, des)
+
+
+
+
+with open(os.path.dirname(indexfile)+"/finish.md") as f:
+    file=f.read()
+    if "[ ]" in file  or "( )" in file :
+        step["verify"]=os.path.dirname(indexfile)+"/verify.sh"
 
 #print(new)
 
@@ -97,6 +125,9 @@ changeKey(new,"code","foreground")
 
 
 new["details"]["assets"]={'host01': [{'file': 'aide', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'rep', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'tpunixauto.sh', 'target': '/etc/profile.d', 'chmod': '+r'}, {'file': 'alternatif.tar.bz2', 'target': '/tmp', 'chmod': '+r'}]}
+new["details"]["intro"]["text"]=new["details"]["intro"]["text"].replace("/markdown/","")
+new["details"]["finish"]["text"]=new["details"]["finish"]["text"].replace("/markdown/","")
+
 
 
 with open('result.json', 'w', encoding='utf8') as fp:
