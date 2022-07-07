@@ -84,6 +84,8 @@ for step in details["steps"]:
     step["background"]="assets/cleanrep.sh"
 
 
+os.makedirs(os.path.dirname(indexfile)+"/assets", exist_ok=True)
+
 for file in ("aide","cleanrep.sh","rep"):
     src="./resourcesKillercoda/"+file
     des=os.path.dirname(indexfile)+"/assets/"+file
@@ -91,15 +93,21 @@ for file in ("aide","cleanrep.sh","rep"):
     shutil.copy(src, des)
 
 
+
 details["finish"]["background"]="assets/cleanrep.sh"
 
 for file in ("intro.md","finish.md"):
     src=os.path.dirname(indexfile)+"/markdown/"+file
-    des=os.path.dirname(indexfile)+"/"+file
-    #print(src+" to "+des)
-    shutil.copy(src, des)
+    if os.path.exists(src):
+        des=os.path.dirname(indexfile)+"/"+file
+        #print(src+" to "+des)
+        shutil.move(src, des)
 
+if os.path.exists('/path/file.txt'):
+    os.remove('/path/file.txt')
 
+if os.path.exists(os.path.dirname(indexfile)+"/markdown"):
+    os.rmdir(os.path.dirname(indexfile)+"/markdown")
 
 
 with open(os.path.dirname(indexfile)+"/finish.md") as f:
@@ -125,10 +133,14 @@ changeKey(new,"courseData","background")
 
 changeKey(new,"code","foreground")
 
+if "assets" in new["details"]: 
+    new["details"]["assets"]={'host01': [{'file': 'aide', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'rep', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'tpunixauto.sh', 'target': '/etc/profile.d', 'chmod': '+r'}, {'file': 'alternatif.tar.bz2', 'target': '/tmp', 'chmod': '+r'}]}
 
-new["details"]["assets"]={'host01': [{'file': 'aide', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'rep', 'target': '/usr/local/bin', 'chmod': '+rx'}, {'file': 'tpunixauto.sh', 'target': '/etc/profile.d', 'chmod': '+r'}, {'file': 'alternatif.tar.bz2', 'target': '/tmp', 'chmod': '+r'}]}
-new["details"]["intro"]["text"]=new["details"]["intro"]["text"].replace("/markdown/","")
-new["details"]["finish"]["text"]=new["details"]["finish"]["text"].replace("/markdown/","")
+if "intro" in new["details"]: 
+    new["details"]["intro"]["text"]=new["details"]["intro"]["text"].replace("/markdown/","")
+
+if "finish" in new["details"]: 
+    new["details"]["finish"]["text"]=new["details"]["finish"]["text"].replace("/markdown/","")
 
 
 
