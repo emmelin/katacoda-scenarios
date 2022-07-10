@@ -1,0 +1,8 @@
+
+for file in $(find . -name courseBase.sh -print) ; do awk 'function filtre(chaine){gsub(/USER/,"MYUSER",chaine);gsub(/GROUP/,"MYGROUP",chaine);gsub(/MDP/,"MYMDP",chaine);print(chaine)  } BEGIN{FS="\""}/ssh/ {gsub(/sudo /,"",$2); filtre($2); next}  {filtre($1)} ' $file > $file.tmp && cp $file.tmp $file && rm $file.tmp; done
+
+awk 'function filtre(chaine){gsub(/USER/,"MYUSER",chaine);gsub(/GROUP/,"MYGROUP",chaine);gsub(/MDP/,"MYMDP",chaine);print(chaine)  } BEGIN{FS="\""}/ssh/ {gsub(/sudo /,"",$2); filtre($2); next}  {filtre($1)} '   1.introduction_bash/assets/courseBase.sh >  1.introduction_bash/assets/courseBase.sh.prov
+cp 1.introduction_bash/assets/courseBase.sh.prov 1.introduction_bash/assets/courseBase.sh
+
+
+
