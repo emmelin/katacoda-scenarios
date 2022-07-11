@@ -1,21 +1,21 @@
 #!/bin/bash
 
-USER=sasha
-MDP=sasha
-GROUP=sasha
+MYUSER=sasha
+MYMDP=sasha
+MYGROUP=sasha
 
 #création de l'utilisateur
-ssh root@host01 "sudo useradd -s /bin/bash -G root -m -U $USER"
+useradd -s /bin/bash -G root -m -U $MYUSER
 # Ajout au groupe
-# ssh root@host01 "sudo usermod -aG $GROUP $USER"
+usermod -aG $MYGROUP $MYUSER
 # attribution du mdp
-ssh root@host01  "sudo echo -e '$MDP\n$MDP' | passwd $USER"
+echo -e '$MYMDP\n$MYMDP' | passwd $MYUSER
 # config du profile
-ssh root@host01 "sudo cp /home/packer/.bashrc /home/$USER/"
-ssh root@host01 "sudo echo . /etc/profile >> /home/$USER/.bashrc"
-ssh root@host01 "sudo cp /home/packer/.profile /home/$USER/"
+cp /home/packer/.bashrc /home/$MYUSER/
+echo . /etc/profile >> /home/$MYUSER/.bashrc
+cp /home/packer/.profile /home/$MYUSER/
 # transfert des droits
-ssh root@host01 "sudo chown -R $USER:$USER /home/$USER"
+chown -R $MYUSER:$MYUSER /home/$MYUSER
 
 # fin de la config
-ssh root@host01 "echo 'done' > /tmp/.fini"
+echo 'done' > /tmp/.fini
