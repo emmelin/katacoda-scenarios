@@ -16,8 +16,8 @@ Pour vérifier que tu as compris, voici quelques exercices.
 # Exercice 1
 
 >> Comment appelle-t-on le '/' qui débute les chemins absolus ? <<
-( ) le slash
-(*) la racine
+(*) le slash
+( ) la racine
 ( ) l'antislash
 ( ) le tronc
 
